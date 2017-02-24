@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
+    <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
+    <button type="button" name="button" onClick="verify()" >Vérification</button>
+  </form>
+  <script>
+  /*Dans le fichier HTML fourni,
+  mettre les bordures des inputs en rouge si les mots de passe sont différents.
+  Sinon les mettre en vert.*/
+  //function activer par le onclick
+  function verify(){
+    //j'ai mis les id dans les var pour ne pas tous reecrire
+    var passWord = document.getElementById('motdepasse');
+    var confirmation = document.getElementById('confirmation');
+    //si l'1 des champs n'est pas rempli il y a alert
+    if ( (passWord.value == '') || (confirmation.value == '') ) {
+      alert('Il faut remplir les champs merci')
+    }else {
+      //sinonsi les champs sont remplis identique vert
+    }    if (passWord.value == confirmation.value){
+      passWord.style.borderColor = 'green';
+      confirmation.style.borderColor = 'green';
+      //devien rouge si les champs ne sont pas identique
+    }else {
+      passWord.style.borderColor = 'red';
+      confirmation.style.borderColor = 'red';
+    }
+  }
+  </script>
+</body>
+</html>
